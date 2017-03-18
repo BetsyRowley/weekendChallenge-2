@@ -14,9 +14,15 @@ $(document).ready(function() {
       data: equation,
       success: function(response) {
         console.log("New equation received!");
+        $("#output").append("<p>Final Answer</p>");
       }
     }); //ends ajax request
 
   });//ends event listener/handler
+
+  //clears form and empties result div
+  $("form").on("click","#clear", function() {
+    $("#output").empty();
+  });
 
 }); //document ready ends

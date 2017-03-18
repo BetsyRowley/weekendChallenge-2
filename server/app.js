@@ -9,6 +9,18 @@ app.use(express.static("server/public", {
 }));
 
 
+//Activate body parser
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: true}));
+
+//Route POST request to /equationSolver
+app.post("/equationSolver", function(req, res) {
+    var equationSolver = req.body;
+    console.log(equationSolver);
+    res.sendStatus(200);
+}); //ends post request
+
+
 //server is listening
 app.listen(port);
 console.log("Listening on port " + port);
