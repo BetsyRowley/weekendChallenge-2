@@ -18,7 +18,12 @@ app.post("/equationSolver", function(req, res) {
     var equationSolver = req.body;
     console.log(equationSolver);
     ///run the computer logic
-    var result = parseInt(equationSolver.value1) + parseInt(equationSolver.value2);
+
+    var result = eval(equationSolver.value1 +
+                    equationSolver.operation +
+                    equationSolver.value2);
+
+
     console.log(result);
     var finalResult = result.toString();
     res.send(finalResult);
