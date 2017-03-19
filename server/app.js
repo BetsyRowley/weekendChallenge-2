@@ -17,7 +17,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.post("/equationSolver", function(req, res) {
     var equationSolver = req.body;
     console.log(equationSolver);
-    res.sendStatus(200);
+    ///run the computer logic
+    var result = parseInt(equationSolver.value1) + parseInt(equationSolver.value2);
+    console.log(result);
+    var finalResult = result.toString();
+    res.send(finalResult);
+    // res.sendStatus(200);
+
 }); //ends post request
 
 
