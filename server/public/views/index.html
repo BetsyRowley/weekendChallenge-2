@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Calculator</title>
+    <link rel="stylesheet" href="views/style.css">
     <script type="text/javascript" src = "vendors/jquery.js"></script>
     <script type="text/javascript" src = "scripts/client.js"></script>
   </head>
@@ -10,17 +11,17 @@
     <h1>Chi-alculator</h1>
 
     <form action="index.html" method="post">
-        Value 1: <input type="text" placeholder ="Enter Value 1" id = "value1">
+        Value 1: <input type="text" placeholder ="Enter Value 1" id = "value1" class = "values">
         <br>
-        <input type="button" value="+" id = "adds">
-        <input type="button" value="-" id = "subtracts">
-        <input type="button" value="*" id = "multiplies">
-        <input type="button" value="/" id = "divides">
+        <input type="button" value="+" id = "adds" class = "math">
+        <input type="button" value="-" id = "subtracts" class = "math">
+        <input type="button" value="*" id = "multiplies" class = "math">
+        <input type="button" value="/" id = "divides" class = "math">
         <br>
-        Value 2: <input type="text" placeholder ="Enter Value 2" id = "value2">
+        Value 2: <input type="text" placeholder ="Enter Value 2" id = "value2" class = "values">
         <br>
-        <input type="submit" value="Calculate" id = "calculate">
-        <input type="reset" value="Reset Input">
+        <input type="submit" value="=" id = "calculate" class = "math">
+        <input type="reset" value="Reset Values">
         <input type="reset" value="Clear All" id = "clear">
     </form>
 

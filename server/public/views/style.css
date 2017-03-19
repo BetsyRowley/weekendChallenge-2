@@ -1,0 +1,43 @@
+body {
+  background-color: darkcyan;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+form, h3, #output {
+  font-size: 40px;
+}
+
+.values {
+  font-size: 30px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
+
+input[type = button] {
+  font-size: 25px;
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+}
+
+input[type = "reset"] {
+  background-color: grey;
+  font-size: 20px;
+  width: 175px;
+  padding: 6px;
+}
+
+input[type = "submit"] {
+  background-color: grey;
+  font-size: 40px;
+  width: 100px;
+}
+
+input {
+  margin: 20px;
+}
