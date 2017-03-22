@@ -34,7 +34,7 @@ $(document).ready(function() {
       success: function(response) {
         console.log("New equation received!");
         // console.log(equation);
-        $("#output").append("<p>" + response + "</p>");
+        appendsAnswer(response);
         }
     }); //ends ajax request
 
@@ -46,3 +46,7 @@ $(document).ready(function() {
   });
 
 }); //document ready ends
+
+function appendsAnswer(response) {
+    $("#output").append("<p>" + response + "</p>");
+}
