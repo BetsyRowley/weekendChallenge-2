@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var port = "8000";
 
+var solver = require("./modules/solver.js");
+
 
 //Routes static content to server
 app.use(express.static("server/public", {
@@ -14,22 +16,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 
 //Route POST request to /equationSolver
-app.post("/equationSolver", function(req, res) {
-    var equationSolver = req.body;
-    console.log(equationSolver);
-    ///run the computer logic
-
-    var result = eval(equationSolver.value1 +
-                    equationSolver.operation +
-                    equationSolver.value2);
-
-
-    console.log(result);
-    var finalResult = result.toString();
-    res.send(finalResult);
-    // res.sendStatus(200);
-
-}); //ends post request
+app.use("/equationSolver", solver);
 
 
 //server is listening
